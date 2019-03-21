@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab Two
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let item of data; let i = index">
+    <ion-card-header (click)="navToDetailPage(item._id)">
+      <ion-card-subtitle>{{item.order.customerName}}</ion-card-subtitle>
+      <ion-card-title>{{item.order.netAmount}}</ion-card-title>
+      <ion-card-title>{{item.order.address}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
